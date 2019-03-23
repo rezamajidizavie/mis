@@ -5,7 +5,7 @@ const passport = require("passport");
 
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
-const posts = require("./routes/api/posts"); 
+const posts = require("./routes/api/posts");
 
 const app = express();
 
@@ -13,17 +13,18 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 // DB config
 const db = require("./config/keys").mongoURI;
 
 // connect to mongodb
 let a = Date.now();
 mongoose
-  .connect(db)
+  .connect(db, { useNewUrlParser: true })
   .then(() => {
     let b = Date.now();
-    console.log(`connected to database successfully after ${(b-a)/1000} secs`)
+    console.log(
+      `connected to database successfully after ${(b - a) / 1000} secs`
+    );
   })
   .catch(err => console.log(err));
 
