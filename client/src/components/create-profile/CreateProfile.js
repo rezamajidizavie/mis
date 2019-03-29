@@ -222,10 +222,7 @@ class CreateProfile extends Component {
                   >
                     لینک شبکه های اجتماعی را وارد نمایید
                   </button>
-                  <span
-                    className="text-muted"
-                    style={{ "margin-right": "10px" }}
-                  >
+                  <span className="text-muted" style={{ marginRight: "10px" }}>
                     اختیاری{" "}
                   </span>
                 </div>
