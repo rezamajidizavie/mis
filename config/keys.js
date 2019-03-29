@@ -1,9 +1,8 @@
-module.exports = {
-  mongoURI:
-    "mongodb://rezamajidizavie:eldreza6620548@ds247944.mlab.com:47944/mis",
-  secretOrKey: "secret"
-};
-
+if (process.env.NODE_ENV === "production") {
+  module.exports = require("./keys_prod");
+} else {
+  module.exports = require("./keys_dev");
+}
 // module.exports = {
 //   mongoURI:'mongodb://127.0.0.1:27017/MIS'
 // }

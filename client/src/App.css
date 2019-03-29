@@ -1,0 +1,13 @@
+body {
+  direction: rtl;
+  font-family: iransans
+}
+
+@font-face {
+  font-family: iransans;
+  src: url(./assets/fonts/IRANSansWeb.woff);
+}
+
+* {
+  direction: rtl
+}

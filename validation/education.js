@@ -10,19 +10,19 @@ module.exports = function validateEducationInput(data) {
   data.from = !isEmpty(data.from) ? data.from : "";
 
   if (Validator.isEmpty(data.school)) {
-    errors.school = "School field is required";
+    errors.school = "وارد کردن نام موسسه ضروری است";
   }
 
   if (Validator.isEmpty(data.degree)) {
-    errors.degree = "Degree field is required";
+    errors.degree = "وارد کردن مقطع تحصیلی ضروری است";
   }
 
   if (Validator.isEmpty(data.fieldofstudy)) {
-    errors.fieldofstudy = "Field of study field is required";
+    errors.fieldofstudy = "وارد کردن رشته تحصیلی ضروری می باشد";
   }
 
   if (Validator.isEmpty(data.from)) {
-    errors.from = "From date field is required";
+    errors.from = "وارد کردن تاریخ شروع ضروری می باشد";
   }
 
   return {

@@ -30,7 +30,7 @@ router.post("/register", (req, res) => {
 
   User.findOne({ email: req.body.email }).then(user => {
     if (user) {
-      errors.email = "Email already exists";
+      errors.email = "ایمیل وارد شده تکراری می باشد";
       res.status(400).json(errors);
     } else {
       const avatar = gravatar.url(req.body.email, {
@@ -76,7 +76,7 @@ router.post("/login", (req, res) => {
   User.findOne({ email }).then(user => {
     //check for user
     if (!user) {
-      errors.email = "User not found";
+      errors.email = "کاربر یافت نشد";
       return res.status(400).json(errors);
     }
     //check password
@@ -95,7 +95,7 @@ router.post("/login", (req, res) => {
           }
         );
       } else {
-        errors.password = "Password incorrect";
+        errors.password = "رمز عبور نادرست می باشد";
         return res.status(400).json(errors);
       }
     });
