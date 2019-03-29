@@ -33,7 +33,7 @@ class Navbar extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
-       <li className="nav-item">
+        <li className="nav-item">
           <Link style={{ color: "white" }} className="nav-link" to="/feed">
             پست مطلب
           </Link>
@@ -45,7 +45,7 @@ class Navbar extends Component {
         </li>
         <li className="nav-item">
           <a
-            style={{ color: "white",float:"right" }}
+            style={{ color: "white", float: "right" }}
             href=""
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
@@ -69,6 +69,13 @@ class Navbar extends Component {
           <Link className="navbar-brand" to="/">
             همگرد!
           </Link>
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/profiles">
+                کاربران <span className="sr-only">(current)</span>
+              </Link>
+            </li>
+          </ul>
           <button
             className="navbar-toggler"
             type="button"
@@ -82,13 +89,6 @@ class Navbar extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <Link className="nav-link" to="/profiles">
-                  کاربران <span className="sr-only">(current)</span>
-                </Link>
-              </li>
-            </ul>
             {isAuthenticated ? authLinks : guestLinks}
           </div>
         </nav>

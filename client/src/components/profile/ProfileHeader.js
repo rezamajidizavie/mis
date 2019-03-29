@@ -9,7 +9,10 @@ class ProfileHeader extends Component {
         <div className="col-md-12">
           <div className="card card-body bg-info text-white mb-3">
             <div className="row">
-              <div className="col-4 col-md-3 m-auto">
+              <div
+                className="col-4 col-md-3 m-auto"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
                 <img
                   className="rounded-circle"
                   src={profile.user.avatar}
